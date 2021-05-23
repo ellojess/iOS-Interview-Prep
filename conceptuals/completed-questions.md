@@ -120,9 +120,20 @@ Arguments are passed by assignment. The rationale behind this is twofold:
 
 <details>
 <summary>
-What is the Swift main advantage?
+What are the main advantages of Swift?
 </summary>
 
+- **Optional Types**, which make applications crash-resistant
+
+- **Built-in error handling**
+
+- **Closures**: self-contained blocks of functionality that can be passed around and used in your code
+
+- **Much faster compared to other languages**
+
+- **Type-safe language**
+
+- **Supports pattern matching**
 </details>
 
 <details>
@@ -130,6 +141,7 @@ What is the Swift main advantage?
 Explain lazy in Swift?
 </summary>
 
+An initial value of the **lazy** stored properties is calculated only when the property is called for the first time
 </details>
 
 <details>
@@ -137,6 +149,9 @@ Explain lazy in Swift?
  Explain generics in Swift?
 </summary>
 
+**Generics** create code that does not get specific about underlying data types
+
+Provides for optimization of code by allowing us to know what type it is going to contain
 </details>
 
 <details>
@@ -144,6 +159,7 @@ Explain lazy in Swift?
 Explain defer?
 </summary>
 
+**defer** keyword which provides a block of code that will be executed in the case when execution is leaving the current scope
 </details>
 
 <details>
@@ -243,6 +259,7 @@ They're super convenient when making an API call, and we need to do something wh
 What is Responder Chain?
 </summary>
 
+A **ResponderChain** is a hierarchy of objects that have the opportunity to respond to events received
 </details>
 
 
@@ -251,6 +268,7 @@ What is Responder Chain?
 What is Regular expressions?
 </summary>
 
+**Regular expressions** are special string patterns that describe how to search through a string
 </details>
 
 
@@ -259,22 +277,27 @@ What is Regular expressions?
 What is Operator Overloading?
 </summary>
 
+**Operator overloading** allows us to change how existing operators behave with types that both already exist. 
+
+**Operators** are those symbols like `+`, `*`, and `/`
 </details>
-
-
-<details>
-<summary>
-What is Responder Chain?
-</summary>
-
-</details>
-
-
 
 <details>
 <summary>
 Please explain Swift’s pattern matching techniques
 </summary>
+
+- **Tuple patterns** are used to match values of corresponding tuple types
+
+- **Type-casting patterns** allow you to cast or match types
+
+- **Wildcard patterns** match and ignore any kind and type of value
+
+- **Optional patterns** are used to match optional values
+
+- **Enumeration case patterns** match cases of existing enumeration types
+
+- **Expression patterns** allow you to compare a given value against a given expression
 
 </details>
 
@@ -289,7 +312,7 @@ When we’re casting an object to another type in Objective-C, it’s pretty sim
 
 - **as?** used for safe casting, return nil if failed
 
-- **as!** used to force casting, crash if failed. should only be used when we know the downcast will succeed.
+- **as!** used to force casting, crash if failed. should only be used when we know the downcast will succeed
 </details>
 
 
@@ -451,13 +474,26 @@ class MyCustomView: UIView {
 What are the different ways to specify the layout of elements in UIView?
 </summary>
 
+There are few common ways to specify the layout of elements in a UIView:
+
+- Using **InterfaceBuilder**, you can add a **XIB** file to your project, layout elements within it, then load the XIB in your application code (either automatically, based on naming conventions, or manually)
+
+- Also, using InterfaceBuilder you can create a storyboard for your application
+
+- Use **NSLayoutConstraints** to have elements in a view arranged by Auto Layout
+
+- Create **CGRects** describing the exact coordinates for each element and pass them to UIView
+
 </details>
 
 <details>
 <summary>
 What is UIStackView?
 </summary>
-UIStackView provides a way to layout a series of views horizontally or vertically. We can define how the contained views adjust themselves to the available space.
+
+**UIStackView** provides a way to layout a series of views horizontally or vertically. 
+
+We can define how the contained views adjust themselves to the available space.
 </details>
 
 <details>
@@ -479,9 +515,20 @@ Broke down its design process to prioritize usability in 4 steps:
 <summary>
 What’s the difference between the frame and the bounds?
 </summary>
+
 The **bounds** of a UIView is the rectangle, expressed as a location (x,y) and size (width, height) relative to its own coordinate system (0,0). 
 
-The **frame** of a UIView is the rectangle, expressed as a location (x,y) and size (width, height) relative to the superview it is contained within.
+The **frame** of a UIView is the rectangle, expressed as a location (x,y) and size (width, height) relative to the superview or parent view it is contained within.
+
+### This means a few things:
+
+- If you create a view at X:0, Y:0, width:100, height:100, its frame and bounds are the same.
+
+- If you move that view to X:100, its frame will reflect that change but its bounds will not. Remember, the bounds is relative to the view’s own space, and internally to the view nothing has changed.
+
+- If you transform the view, e.g. rotating it or scaling it up, the frame will change to reflect that, but the bounds still won’t – as far as the view is concerned internally, it hasn’t changed.
+
+Generally it’s better to modify bounds plus center and transform, and let UIKit calculate the frame for you.
 </details>
 
 <details>
