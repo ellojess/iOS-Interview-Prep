@@ -546,6 +546,8 @@ The bounding box is a term used in geometry; it refers to the smallest measure (
 What is a race condition?
 </summary>
 
+A **race condition** occurs when two or more threads can access shared data and they try to change it at the same time.
+
 </details>
 
 <details>
@@ -566,6 +568,8 @@ The main thread.
 <summary>
 Explain Grand Central Dispatch (GCD)
 </summary>
+
+GCD is a library that provides a low-level and object-based API to run tasks concurrently while managing threads behind the scenes
 
 </details>
 
@@ -630,9 +634,10 @@ Synchronized guarantees that only one thread can be executing that code in the b
 <summary>
 What is the difference between Synchronous & Asynchronous task?
 </summary>
-Synchronous: waits until the task have completed 
 
-Asynchronous: completes a task in the background and can notify you when complete
+**Synchronous**: waits until the task have completed 
+
+**Asynchronous**: completes a task in the background and can notify you when complete
 </details>
 
 <details>
@@ -640,13 +645,13 @@ Asynchronous: completes a task in the background and can notify you when complet
 Specify types of concurrency challenges: 
 </summary>
 
-- **Deadlocks**
+- **Deadlocks**: A deadlock occurs when two or sometimes more tasks wait for the other to finish, and neither ever does.
 
-- **Priority Inversion**
+- **Priority Inversion** 
 
-- **Race Conditions**
+- **Race Conditions**: A race condition occurs when two or more threads can access shared data and they try to change it at the same time.
 
-- **Critical Section**
+- **Critical Section**: 
 
 - **Locking(mutexes, rendez vous, semaphores)**
     A **mutex** is like a token that passes from one thread to another, allowing one thread at a time to proceed.
@@ -761,7 +766,8 @@ What are the states of an iOS App?
 <summary>
 Why are design pattern important?
 </summary>
-Design patterns are reusable solutions to common problems in software design. They’re templates designed to help you write code that’s easy to understand and reuse. 
+
+**Design patterns** are reusable solutions to common problems in software design. They’re templates designed to help you write code that’s easy to understand and reuse. 
 
 Most common Cocoa design patterns:
 - **Creational**: Singleton.
@@ -777,6 +783,9 @@ Most common Cocoa design patterns:
 What is Singleton Pattern ?
 </summary>
 
+The **Singleton design pattern** ensures that only one instance exists for a given class and that there’s a global access point to that instance. 
+
+It usually uses lazy loading to create the single instance when it’s needed the first time.
 </details>
 
 
@@ -785,6 +794,9 @@ What is Singleton Pattern ?
 What is Facade Design Pattern?
 </summary>
 
+The **Facade design pattern** provides a single interface to a complex subsystem. 
+
+Instead of exposing the user to a set of classes and their APIs, you only expose one simple unified API.
 </details>
 
 <details>
@@ -792,6 +804,9 @@ What is Facade Design Pattern?
 What is Decorator Design Pattern?
 </summary>
 
+The **Decorator pattern** dynamically adds behaviors and responsibilities to an object without modifying its code. 
+
+It’s an alternative to subclassing where you modify a class’s behavior by wrapping it with another object.
 </details>
 
 <details>
@@ -799,6 +814,9 @@ What is Decorator Design Pattern?
 What is Adapter Pattern?
 </summary>
 
+**Adapter** allows classes with incompatible interfaces to work together. 
+
+It wraps itself around an object and exposes a standard interface to interact with that object.
 </details>
 
 <details>
@@ -806,6 +824,9 @@ What is Adapter Pattern?
 What is Observer Pattern?
 </summary>
 
+In the **Observer pattern**, one object notifies other objects of any state changes.
+
+Cocoa implements the observer pattern in two ways: Notifications and Key-Value Observing (KVO).
 </details>
 
 
@@ -814,6 +835,7 @@ What is Observer Pattern?
 What is Memento Pattern?
 </summary>
 
+**Memento Pattern** saves items somewhere else. Later on, this externalized state can be restored without violating encapsulation; that is, private data remains private. One of Apple’s specialized implementations of the Memento pattern is Archiving other hand iOS uses the Memento pattern as part of State Restoration.
 </details>
 
 # Architecture
@@ -823,11 +845,25 @@ What is Memento Pattern?
 Explain MVC
 </summary>
 
+- **Models** — responsible for the domain data or a data access layer which manipulates the data, think of ‘Person’ or ‘PersonDataProvider’ classes.
+
+- **Views** — responsible for the presentation layer (GUI), for iOS environment think of everything starting with ‘UI’ prefix.
+
+- **Controller**/**Presenter**/**ViewModel** — the glue or the mediator between the Model and the View, in general responsible for altering the Model by reacting to the user’s actions performed on the View and updating the View with changes from the Model.
+
 </details>
 
 <details>
 <summary>
 Explain MVVM
 </summary>
+
+**Model-View-ViewModel (MVVM)** is a structural design pattern that separates objects into three distinct groups:
+
+- **Models** hold application data. They’re usually structs or simple classes.
+
+- **Views** display visual elements and controls on the screen. They’re typically subclasses of UIView.
+
+- **View models** transform model information into values that can be displayed on a view. They’re usually classes, so they can be passed around as references.
 
 </details>
