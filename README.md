@@ -1,3 +1,6 @@
+<table>
+<tr><td>
+
 |      Data Structures & Fundamentals     | Status |
 |:---------------------------------------:|:------:|
 | [Conceptual Questions] | 🚧 |
@@ -20,16 +23,26 @@
 [Trees]: data-structures/trees/trees.md
 [Graphs]: data-structures/graphs/graphs.md 
 
-|      Sorting Algorithms     | Status |
+</td><td>
+
+|      Sorting & Searching Algorithms     | Status |
 |:---------------------------------------:|:------:|
 | [Quick Sort] | ❌ |
 | [Merge Sort] | ❌ |
 | [Bubble Sort] | ❌ |
 | [Insertion Sort] | ❌ |
 | [Selection Sort] | ❌ |
+| [DFS] | ❌ |
+| [BFS] | ❌ |
+| [Binary Search] | ❌ |
 
 [Quick Sort]: algorithms/sorting/quick-sort.md
 [Merge Sort]: algorithms/sorting/merge-sort.md
 [Bubble Sort]: algorithms/sorting/bubble-sort.md
 [Insertion Sort]: algorithms/sorting/insertion-sort.md
 [Selection Sort]: algorithms/sorting/selection-sort.md
+[Binary Search]: algorithms/searching/binary-search.md
+[DFS]: algorithms/searching/dfs.md
+[BFS]: algorithms/searching/bfs.md
+
+</td></tr> </table>
