@@ -17,42 +17,62 @@
 <summary>
 When and why do we use an object as opposed to a struct?
 </summary>
-Structs are value types. Classes(Objects) are reference types.
+
+| Struct      | Class (Object) |
+| :---        |    :--------:  |
+| value type | reference type | 
+| organized memory |  full object oriented functionality<br> (methods, data, virtual functions, <br>inheritance, etc) |
+
+- When you copy a struct, you end up with two unique copies of the data
+
+- When you copy a class, you end up with two references to one instance of the data
+
+- **Struct** is faster than Class because: To store class, Apple first finds memory in Heap, then maintain the extra field to RETAIN count. Also, store reference of Heap into Stack. So when it comes to access part, it has to process stack and heap
+
 </details>
 
 <details>
 <summary>
 What is Class?
 </summary>
-A class is meant to define an object and how it works. In this way, a class is like a blueprint of an object.
+
+A **class** is an object and how it works. i.e., a class is like a blueprint of an object
 </details>
 
 <details>
 <summary>
 What is Object?
 </summary>
-An object is an instance of a class.
+An object is an instance of a class
 </details>
 
 <details>
 <summary>
 What is interface?
 </summary>
-Like a class, an interface defines methods. Unlike a class, an interface never implements methods; instead, classes that implement the interface implement the methods defined by the interface
+
+- Like a class, an interface defines methods
+
+- Unlike a class, an interface never implements methods;
+
+- classes that implement the interface implement the methods defined by the interface
 </details>
 
 <details>
 <summary>
 What are Functions?
 </summary>
-
+self contained chunks of code that perform specific tasks 
 </details>
 
 <details>
 <summary>
 What is Enum or Enumerations?
 </summary>
-Enumerations define a finite number of states, and can bundle associated values with each individual state, you can use them to model the state of your app and its internal processes.
+
+- **Enumerations** define a finite number of states, and can bundle associated values with each individual state
+
+- you can use them to model the state of your app and its internal processes
 </details>
 
 
@@ -60,7 +80,7 @@ Enumerations define a finite number of states, and can bundle associated values 
 <summary>
 Explain Guard statement
 </summary>
-
+a statement that is essentially a redirection or early exit of a statement or function to prevent crashing and incorrect data
 </details>
 
 
@@ -68,6 +88,13 @@ Explain Guard statement
 <summary>
 How to pass data between view controllers?
 </summary>
+There are 3 ways to pass data between view controllers.
+
+- **Segue**, in prepareForSegue method (Forward) - visual connectors between view controllers in storyboards
+
+- **Delegate** (Backward) - design pattern that allows one object to send messages to another object when a specific event happens.
+
+- **Setting variable directly** (Forward) - getting/settings variables within classes 
 
 </details>
 
@@ -75,7 +102,17 @@ How to pass data between view controllers?
 <summary>
 How to pass a variable as a reference?
 </summary>
+there are two types of variables: reference and value types. 
 
+- by passing value type, the variable will create a copy of its data
+
+- by passing reference type variable will just point to the original data in the memory
+
+Arguments are passed by assignment. The rationale behind this is twofold:
+
+- the parameter passed in is actually a reference to an object (but the reference is passed by value)
+
+- some data types are mutable, but others aren't
 </details>
 
 
