@@ -4,7 +4,7 @@
   <ol>
     <li><a href="#General-CS">General CS</a></li>
     <li><a href="#Swift-Fundamentals">Swift Fundamentals</a></li>
-    <li><a href="#UI-Interface">UI + Interface</a></li>
+    <li><a href="#UI-&-Interface">UI & Interface</a></li>
     <li><a href="#Concurrency-&-Parallelism">Concurrency & Parallelism</a></li>
     <li><a href="#Design-Patterns">Design Patterns</a></li>
     <li><a href="#Architecture">Architecture</a></li>
